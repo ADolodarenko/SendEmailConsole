@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface EmailLoader
 {
-    List<Email> loadEmails();
+    List<Email> loadEmails() throws WrongEmailsException;
 }

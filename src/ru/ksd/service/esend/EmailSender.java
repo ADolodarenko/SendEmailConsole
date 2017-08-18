@@ -7,6 +7,8 @@ public class EmailSender
 	private static final String INCORRECT_PROPERTIES_MESSAGE = "Incorrect properties.";
 
 	private Properties properties;
+	private boolean isNeededSend;
+	private boolean isInitialized;
 
 	public EmailSender(Properties properties) throws WrongPropertiesException
 	{
@@ -25,6 +27,19 @@ public class EmailSender
 		this.properties = properties;
 	}
 
+	private void init()
+	{
 
+		isInitialized = true;
+	}
 
+	public void send()
+	{
+
+	}
+
+	public boolean isNeededSend()
+	{
+		return isNeededSend;
+	}
 }
