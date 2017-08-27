@@ -1,5 +1,10 @@
 package ru.ksd.service.esend;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -12,13 +17,13 @@ public class Email
     private String sender;
     private List<String> recipientsTo;
     private List<String> recipientsCc;
-    private List<String> recipientsDcc;
+    private List<String> recipientsBcc;
     private String title;
     private String body;
     private List<String> fileNames;
     private boolean isWrongAddressSensitive;
 
-    public Email(String sender, String title, String body, boolean isWrongAddressSensitive) throws WrongEmailsException
+    public Email(String sender, String title, String body, String signPath, boolean isWrongAddressSensitive) throws WrongEmailsException
     {
         if (!addressIsCorrect(sender))
             throw new WrongEmailsException("Incorrect sender address.");
@@ -31,18 +36,62 @@ public class Email
 
         this.recipientsTo = new LinkedList<>();
         this.recipientsCc = new LinkedList<>();
-        this.recipientsDcc = new LinkedList<>();
+        this.recipientsBcc = new LinkedList<>();
         this.sender = sender;
         this.title = title;
         this.body = body;
         this.fileNames = new LinkedList<>();
         this.isWrongAddressSensitive = isWrongAddressSensitive;
+
+        if (signPath != null && (!signPath.isEmpty()))
+        	setBodyWithSign(signPath);
     }
+
+    private void setBodyWithSign(String signPath)
+	{
+		File signFile = new File(signPath);
+
+		if (signFile.exists() && signFile.isFile())
+			try
+			{
+				byte[] buffer = Files.readAllBytes(signFile.toPath());
+				String sign = new String(buffer);
+
+				this.body = sign.replace("<-->", this.body);
+			}
+			catch (IOException e)
+			{
+				//TODO: log here
+			}
+	}
 
     public boolean emailIsCorrect()
     {
-        return (this.recipientsTo.size() + this.recipientsCc.size() + this.recipientsDcc.size() > 0);
+        return (this.recipientsTo.size() + this.recipientsCc.size() + this.recipientsBcc.size() > 0);
     }
+
+	public void addRecipients(String[] recipients) throws WrongEmailsException
+	{
+		for (String recipient : recipients)
+		{
+			int pos = recipient.indexOf(":");
+
+			if (pos == -1)
+				addRecipientTo(recipient);
+			else
+			{
+				String type = recipient.substring(0, pos).trim().toLowerCase();
+				String value = recipient.substring(pos + 1).trim();
+
+				if ("bcc".equals(type))
+					addRecipientBcc(value);
+				else if ("cc".equals(type))
+					addRecipientCc(value);
+				else
+					addRecipientTo(value);
+			}
+		}
+	}
 
     public void addRecipientTo(String recipient) throws WrongEmailsException
     {
@@ -54,9 +103,9 @@ public class Email
         addRecipient(recipientsCc, recipient);
     }
 
-    public void addRecipientDcc(String recipient) throws WrongEmailsException
+    public void addRecipientBcc(String recipient) throws WrongEmailsException
     {
-        addRecipient(recipientsDcc, recipient);
+        addRecipient(recipientsBcc, recipient);
     }
 
     private void addRecipient(List<String> recipients, String recipient) throws WrongEmailsException
@@ -81,6 +130,23 @@ public class Email
 
         return result;
     }
+
+	public void addFileNames(String[] fileNames)
+	{
+		for (String fileName : fileNames)
+			addFileName(fileName);
+	}
+
+    public void addFileName(String fileName)
+	{
+		if (fileNameIsCorrect(fileName))
+			fileNames.add(fileName);
+	}
+
+    private boolean fileNameIsCorrect(String fileName)
+	{
+		return (fileName != null && (!fileName.isEmpty()));
+	}
 
     private boolean titleIsCorrect(String title)
     {
@@ -107,9 +173,9 @@ public class Email
         return recipientsCc;
     }
 
-    public List<String> getRecipientsDcc()
+    public List<String> getRecipientsBcc()
     {
-        return recipientsDcc;
+        return recipientsBcc;
     }
 
     public List<String> getFileNames()

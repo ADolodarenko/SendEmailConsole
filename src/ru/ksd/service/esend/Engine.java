@@ -30,7 +30,7 @@ public class Engine
 		}
 		catch (WrongPropertiesException e)
 		{
-
+			//TODO: Logging
 		}
 	}
 
@@ -40,7 +40,8 @@ public class Engine
 
 		try
 		{
-			PropertiesLoader loader = PropertiesLoaderFactory.getInstance(DataSourceType.FILE, "/usr/xxx.txt");
+			PropertiesLoader loader = PropertiesLoaderFactory.getInstance(DataSourceType.FILE,
+					"./esend.properties");
 			properties = loader.load();
 
 			if (properties != null && !properties.isEmpty())
@@ -67,6 +68,10 @@ public class Engine
 				result = true;
 		}
 		catch (WrongParametersException e)
+		{
+			//TODO: Logging
+		}
+		catch (WrongEmailsException e)
 		{
 			//TODO: Logging
 		}
