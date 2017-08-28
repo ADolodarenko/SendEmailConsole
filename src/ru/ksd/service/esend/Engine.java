@@ -1,5 +1,10 @@
 package ru.ksd.service.esend;
 
+import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,6 +24,24 @@ public class Engine
 
 	private Properties properties;
 	private List<Email> emails;
+
+	public static String getCurrentDir()
+	{
+		URL location = Engine.class.getProtectionDomain().getCodeSource().getLocation();
+		String path = location.getFile();
+
+		try
+		{
+			path = URLDecoder.decode(path.replace('/', File.separatorChar),
+					Charset.defaultCharset().name());
+		}
+		catch (UnsupportedEncodingException e)
+		{
+			//TODO: Logging
+		}
+
+		return path;
+	}
 
 	public void send()
 	{
@@ -41,7 +64,7 @@ public class Engine
 		try
 		{
 			PropertiesLoader loader = PropertiesLoaderFactory.getInstance(DataSourceType.FILE,
-					"./esend.properties");
+					getCurrentDir() + "esend.properties");
 			properties = loader.load();
 
 			if (properties != null && !properties.isEmpty())
