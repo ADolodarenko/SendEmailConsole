@@ -4,6 +4,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * This class is responsible for loading properties from file.
+ */
 public class FilePropertiesLoader implements PropertiesLoader
 {
 	private String filePath;

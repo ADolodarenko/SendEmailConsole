@@ -10,6 +10,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * Engine is a class that encapsulates the main functionality of the app.
+ * This class gets all parameters and emails in order to initialize the EmailSender.
+ */
 public class Engine
 {
 	private static Map<String, DataSourceType> sourceTypes;
@@ -48,6 +52,7 @@ public class Engine
 		try
 		{
 			EmailSender sender = new EmailSender(properties);
+
 
 
 		}

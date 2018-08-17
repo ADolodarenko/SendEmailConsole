@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * This class is designed to load an email from arguments that are given through the console as part of the program call.
+ */
 public class ConsoleEmailLoader implements EmailLoader
 {
 	private String[] arguments;

@@ -1,5 +1,6 @@
 package ru.ksd.service.esend;
 
+import javax.mail.Session;
 import java.util.Properties;
 
 public class EmailSender
@@ -8,7 +9,7 @@ public class EmailSender
 
 	private Properties properties;
 	private boolean isNeededSend;
-	private boolean isInitialized;
+	private Session mailSession;
 
 	public EmailSender(Properties properties) throws WrongPropertiesException
 	{
@@ -27,10 +28,14 @@ public class EmailSender
 		this.properties = properties;
 	}
 
-	private void init()
+	private boolean init()
 	{
+		mailSession = Session.getDefaultInstance(properties);
 
-		isInitialized = true;
+
+		return false;
+
+
 	}
 
 	public void send()
