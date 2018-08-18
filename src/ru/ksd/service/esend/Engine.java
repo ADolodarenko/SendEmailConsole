@@ -52,11 +52,16 @@ public class Engine
 		try
 		{
 			EmailSender sender = new EmailSender(properties);
-
-
-
+			
+			sender.open();
+			sender.send(emails);
+			sender.close();
 		}
 		catch (WrongPropertiesException e)
+		{
+			//TODO: Logging
+		}
+		catch (WrongParametersException e)
 		{
 			//TODO: Logging
 		}
