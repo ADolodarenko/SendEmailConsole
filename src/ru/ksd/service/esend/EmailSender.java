@@ -1,8 +1,14 @@
 package ru.ksd.service.esend;
 
-import javax.mail.Authenticator;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import java.io.File;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Properties;
@@ -79,7 +85,7 @@ public class EmailSender
 			mailSession = Session.getInstance(sessionProperties);
 	}
 	
-	public void send(List<Email> emails) throws WrongParametersException
+	public void sendAllEmails(List<Email> emails) throws WrongParametersException
 	{
 		if (mailSession == null)
 			throw new WrongParametersException("There are now session established.");
@@ -88,16 +94,72 @@ public class EmailSender
 			throw new WrongParametersException("There are now emails to send.");
 		
 		for (Email email : emails)
+			try
+			{
+				sendOneEmail(email);
+			}
+			catch (MessagingException e)
+			{
+				e.printStackTrace();
+			}
+	}
+	
+	public void sendOneEmail(Email email) throws MessagingException
+	{
+		Transport.send(buildMessage(email));
+	}
+	
+	private Message buildMessage(Email email) throws MessagingException
+	{
+		Message result = new MimeMessage(mailSession);
+		
+		result.setFrom(new InternetAddress(email.getSender()));
+		
+		setMessageRecipients(result, Message.RecipientType.TO, email.getRecipientsTo());
+		setMessageRecipients(result, Message.RecipientType.CC, email.getRecipientsCc());
+		setMessageRecipients(result, Message.RecipientType.BCC, email.getRecipientsBcc());
+		
+		result.setSubject(email.getTitle());
+		
+		MimeMultipart multipart = new MimeMultipart();
+		
+		BodyPart messagePart = new MimeBodyPart();
+		messagePart.setContent(email.getBody(), "text/html");
+		multipart.addBodyPart(messagePart);
+		
+		setAttachments(multipart, email.getFileNames());
+		
+		result.setContent(multipart);
+		
+		return result;
+	}
+	
+	private void setAttachments(MimeMultipart multipart, List<String> attachmentNames) throws MessagingException
+	{
+		if (attachmentNames != null)
 		{
-			//Transforming and Sending...
+			BodyPart attachmentPart;
+			
+			for (String attachmentName : attachmentNames)
+			{
+				attachmentPart = new MimeBodyPart();
+				DataSource source = new FileDataSource(attachmentName);
+				attachmentPart.setDataHandler(new DataHandler(source));
+				attachmentPart.setFileName(new File(attachmentName).getName());
+				
+				multipart.addBodyPart(attachmentPart);
+			}
 		}
 	}
 	
-	public void close()
+	private void setMessageRecipients(Message message, Message.RecipientType recipientType, List<String> recipients)
+			throws MessagingException
 	{
-		;
+		if (recipients != null)
+			for (String recipient: recipients)
+				message.addRecipient(recipientType, new InternetAddress(recipient));
 	}
-
+	
 	public boolean isNeededSend()
 	{
 		return isNeededSend;

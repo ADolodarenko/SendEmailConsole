@@ -180,8 +180,18 @@ public class Email
     {
         return recipientsBcc;
     }
-
-    public List<String> getFileNames()
+	
+	public String getTitle()
+	{
+		return title;
+	}
+	
+	public String getBody()
+	{
+		return body;
+	}
+	
+	public List<String> getFileNames()
     {
         return fileNames;
     }

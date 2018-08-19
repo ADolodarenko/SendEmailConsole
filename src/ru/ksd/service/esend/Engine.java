@@ -54,8 +54,7 @@ public class Engine
 			EmailSender sender = new EmailSender(properties);
 			
 			sender.open();
-			sender.send(emails);
-			sender.close();
+			sender.sendAllEmails(emails);
 		}
 		catch (WrongPropertiesException e)
 		{
