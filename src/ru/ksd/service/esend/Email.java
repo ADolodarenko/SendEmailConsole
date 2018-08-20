@@ -143,7 +143,13 @@ public class Email
     public void addFileName(String fileName)
 	{
 		if (fileNameIsCorrect(fileName))
-			fileNames.add(fileName);
+		{
+			String shortName = new File(fileName).getName();
+			if (shortName.equals(fileName))
+				fileNames.add(Engine.getCurrentDir() + File.separatorChar + fileName);
+			else
+				fileNames.add(fileName);
+		}
 	}
 
     private boolean fileNameIsCorrect(String fileName)

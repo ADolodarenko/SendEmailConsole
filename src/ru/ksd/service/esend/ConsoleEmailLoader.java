@@ -29,16 +29,16 @@ public class ConsoleEmailLoader implements EmailLoader
 		String body = "--";
     	if (arguments.length > 3)
 			body = arguments[3];
+	
+		StringBuilder signPath = new StringBuilder();
+		StringBuilder filePaths = new StringBuilder();
+    	setPaths(arguments, signPath, filePaths);
 
-    	String signPath = null;
-    	if (arguments.length == 6)
-    		signPath = arguments[5];
-
-    	Email email = new Email(arguments[0], arguments[2], body, signPath, false);
+    	Email email = new Email(arguments[0], arguments[2], body, signPath.toString(), false);
     	email.addRecipients(arguments[1].split(","));
 
-    	if (arguments.length == 5)
-    		email.addFileNames(arguments[4].split(","));
+    	if (filePaths.length() > 0)
+    		email.addFileNames(filePaths.toString().split(","));
 
     	if (!email.emailIsCorrect())
     		throw new WrongEmailsException("Wrong email");
@@ -47,4 +47,36 @@ public class ConsoleEmailLoader implements EmailLoader
 
         return emails;
     }
+	
+	private void setPaths(String[] arguments, StringBuilder signPath, StringBuilder filePaths)
+	{
+		if (arguments.length > 4)
+			for (int i = 4; i < arguments.length; i++)
+				modifyPath(arguments[i], signPath, filePaths);
+	}
+	
+	private void modifyPath(String buffer, StringBuilder signPath, StringBuilder filePaths)
+	{
+		int indexS = buffer.toLowerCase().indexOf("sign:");
+		int indexF = buffer.toLowerCase().indexOf("files:");
+		
+		if (indexS == 0)
+		{
+			signPath.delete(0, signPath.length() - 1);
+			signPath.append(buffer.substring(5));
+		}
+		else
+		{
+			String paths = null;
+			if (indexF == 0)
+				paths = buffer.substring(6);
+			else
+				paths = buffer;
+			
+			if (filePaths.length() > 0)
+				filePaths.append(',');
+			
+			filePaths.append(paths);
+		}
+	}
 }
