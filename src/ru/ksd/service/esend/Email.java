@@ -29,7 +29,7 @@ public class Email
     public Email(String sender, String title, String body, String signPath, boolean isWrongAddressSensitive) throws WrongEmailsException
     {
         if (!addressIsCorrect(sender))
-            throw new WrongEmailsException("Incorrect sender address.");
+            throw new WrongEmailsException("The sender address '" + sender + "' is incorrect.");
 
         if (!titleIsCorrect(title))
             throw new WrongEmailsException("Incorrect title.");
@@ -46,19 +46,20 @@ public class Email
         this.fileNames = new LinkedList<>();
         this.isWrongAddressSensitive = isWrongAddressSensitive;
 
-        if (signPath != null && (!signPath.isEmpty()))
+        if (fileNameIsCorrect(signPath))
         	setBodyWithSign(signPath);
     }
 
-    private void setBodyWithSign(String signPath)
+    private void setBodyWithSign(String signPath) throws WrongEmailsException
 	{
-		File signFile = new File(signPath);
+		File signFile = new File(getAbsolutePath(signPath));
 
 		if (signFile.exists() && signFile.isFile())
+		{
 			try
 			{
 				byte[] buffer = Files.readAllBytes(signFile.toPath());
-				String sign = new String(buffer);
+				String sign = new String(buffer, "UTF-8");
 
 				this.body = sign.replace("<-->", this.body);
 			}
@@ -66,6 +67,9 @@ public class Email
 			{
 				//TODO: log here
 			}
+		}
+		else
+			throw new WrongEmailsException("The sign file '" + signPath + "' doesn't exist.");
 	}
 
     public boolean emailIsCorrect()
@@ -117,7 +121,7 @@ public class Email
             recipients.add(recipient);
         else
             if (isWrongAddressSensitive)
-                throw new WrongEmailsException("Incorrect recipient address.");
+                throw new WrongEmailsException("The recipient address '" + recipient + "' is incorrect.");
     }
 
     private boolean addressIsCorrect(String recipient)
@@ -134,22 +138,18 @@ public class Email
         return result;
     }
 
-	public void addFileNames(String[] fileNames)
+	public void addFileNames(String[] fileNames) throws WrongEmailsException
 	{
 		for (String fileName : fileNames)
 			addFileName(fileName);
 	}
 
-    public void addFileName(String fileName)
+    public void addFileName(String fileName) throws WrongEmailsException
 	{
 		if (fileNameIsCorrect(fileName))
-		{
-			String shortName = new File(fileName).getName();
-			if (shortName.equals(fileName))
-				fileNames.add(Engine.getCurrentDir() + File.separatorChar + fileName);
-			else
-				fileNames.add(fileName);
-		}
+			fileNames.add(getAbsolutePath(fileName));
+		else
+			throw new WrongEmailsException("File name '" + fileName + "' is incorrect.");
 	}
 
     private boolean fileNameIsCorrect(String fileName)
@@ -201,4 +201,13 @@ public class Email
     {
         return fileNames;
     }
+    
+    private String getAbsolutePath(String fileName)
+	{
+		String shortName = new File(fileName).getName();
+		if (shortName.equals(fileName))
+			return Engine.getCurrentDir() + File.separatorChar + fileName;
+		else
+			return fileName;
+	}
 }

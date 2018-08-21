@@ -124,7 +124,7 @@ public class EmailSender
 		MimeMultipart multipart = new MimeMultipart();
 		
 		BodyPart messagePart = new MimeBodyPart();
-		messagePart.setContent(email.getBody(), "text/html");
+		messagePart.setContent(email.getBody(), "text/html; charset=utf-8");
 		multipart.addBodyPart(messagePart);
 		
 		setAttachments(multipart, email.getFileNames());

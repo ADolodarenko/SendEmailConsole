@@ -62,7 +62,8 @@ public class ConsoleEmailLoader implements EmailLoader
 		
 		if (indexS == 0)
 		{
-			signPath.delete(0, signPath.length() - 1);
+			if (signPath.length() > 0)
+				signPath.delete(0, signPath.length() - 1);
 			signPath.append(buffer.substring(5));
 		}
 		else
