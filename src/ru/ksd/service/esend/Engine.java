@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Engine is a class that encapsulates the main functionality of the app.
@@ -19,6 +21,8 @@ import java.util.Properties;
 public class Engine
 {
 	private static Map<String, DataSourceType> sourceTypes;
+
+	private static Logger log = Logger.getLogger(Engine.class.getName());
 
 	static
 	{
@@ -97,9 +101,7 @@ public class Engine
 									 Charset.defaultCharset().name());
 		}
 		catch (UnsupportedEncodingException e)
-		{
-			//TODO: Logging
-		}
+		{}
 		*/
 
 		return path;
@@ -116,11 +118,11 @@ public class Engine
 		}
 		catch (WrongPropertiesException e)
 		{
-			//TODO: Logging
+			log.log(Level.SEVERE, "Exception: ", e);
 		}
 		catch (WrongParametersException e)
 		{
-			//TODO: Logging
+			log.log(Level.SEVERE, "Exception: ", e);
 		}
 	}
 
@@ -140,7 +142,7 @@ public class Engine
 		}
 		catch (Exception e)
 		{
-			//TODO: Logging
+			log.log(Level.SEVERE, "Exception: ", e);
 		}
 
 		return result;
@@ -160,11 +162,11 @@ public class Engine
 		}
 		catch (WrongParametersException e)
 		{
-			//TODO: Logging
+			log.log(Level.SEVERE, "Exception: ", e);
 		}
 		catch (WrongEmailsException e)
 		{
-			//TODO: Logging
+			log.log(Level.SEVERE, "Exception: ", e);
 		}
 
 		return result;

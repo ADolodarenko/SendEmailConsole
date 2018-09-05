@@ -12,14 +12,17 @@ import java.io.File;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class EmailSender
 {
 	private static final String INCORRECT_PROPERTIES_MESSAGE = "Incorrect properties.";
 	private static final String[] MANDATORY_PROPERTY_NAMES = {"mail.smtp.host", "mail.smtp.port", "mail.user"};
 
+	private static Logger log = Logger.getLogger(EmailSender.class.getName());
+
 	private Properties properties;
-	private boolean isNeededSend;
 	private Session mailSession;
 
 	public EmailSender(Properties properties) throws WrongPropertiesException
@@ -100,7 +103,7 @@ public class EmailSender
 			}
 			catch (MessagingException e)
 			{
-				e.printStackTrace();
+				log.log(Level.SEVERE, "Exception: ", e);
 			}
 	}
 	
@@ -158,10 +161,5 @@ public class EmailSender
 		if (recipients != null)
 			for (String recipient: recipients)
 				message.addRecipient(recipientType, new InternetAddress(recipient));
-	}
-	
-	public boolean isNeededSend()
-	{
-		return isNeededSend;
 	}
 }

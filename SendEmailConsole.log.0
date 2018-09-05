@@ -1,0 +1,9 @@
+сен 05, 2018 4:51:54 PM ru.ksd.service.esend.Engine loadEmails
+SEVERE: Exception: 
+ru.ksd.service.esend.WrongEmailsException: The sign file 'MessageBody.conf' doesn't exist.
+	at ru.ksd.service.esend.Email.setBodyWithSign(Email.java:84)
+	at ru.ksd.service.esend.Email.<init>(Email.java:54)
+	at ru.ksd.service.esend.ConsoleEmailLoader.loadEmails(ConsoleEmailLoader.java:37)
+	at ru.ksd.service.esend.Engine.loadEmails(Engine.java:158)
+	at ru.ksd.service.esend.Main.main(Main.java:18)
+

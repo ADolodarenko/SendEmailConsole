@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,6 +18,8 @@ import java.util.regex.Pattern;
 public class Email
 {
     private static final String ADDRESS_PATTERN = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
+
+    private static Logger log = Logger.getLogger(Email.class.getName());
 
     private String sender;
     private List<String> recipientsTo;
@@ -48,6 +52,14 @@ public class Email
 
         if (fileNameIsCorrect(signPath))
         	setBodyWithSign(signPath);
+
+        correctBodyAsHtml();
+    }
+
+    private void correctBodyAsHtml()
+    {
+        this.body = this.body.replace("\r\n", "<br/>");
+        this.body = this.body.replace("\n", "<br/>");
     }
 
     private void setBodyWithSign(String signPath) throws WrongEmailsException
@@ -65,7 +77,7 @@ public class Email
 			}
 			catch (IOException e)
 			{
-				//TODO: log here
+				log.log(Level.SEVERE, "Exception: ", e);
 			}
 		}
 		else
