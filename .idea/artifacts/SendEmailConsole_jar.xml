@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="SendEmailConsole:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar</output-path>
+    <root id="root">
+      <element id="archive" name="SendEmailConsole.jar">
+        <element id="module-output" name="SendEmailConsole" />
+      </element>
+      <element id="library" level="project" name="javax.mail" />
+    </root>
+  </artifact>
+</component>

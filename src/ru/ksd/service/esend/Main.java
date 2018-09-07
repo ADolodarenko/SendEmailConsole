@@ -26,7 +26,8 @@ public class Main
         try
         {
             InputStream input = Files.newInputStream(Paths.get(path));
-            LogManager.getLogManager().readConfiguration(input);
+            LogManager manager = LogManager.getLogManager();
+            manager.readConfiguration(input);
         }
         catch (IOException e)
         {
