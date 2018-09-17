@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SendEmailConsole:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="af99d641-9e5c-488a-a8fa-25675cde7ebc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/SendEmailConsole.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SendEmailConsole.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/ConsoleEmailLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/ksd/service/esend/ConsoleEmailLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoaderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/ksd/service/esend/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/FilePropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/ksd/service/esend/FilePropertiesLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoaderFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ru/flc/service/log/LogUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar/Books.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar/MessageBody.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar/SendEmailConsole.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar/SendEmailConsole.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar/esend.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SendEmailConsole/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/esend.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/ConsoleEmailLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/DataSourceType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/Email.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/EmailLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/EmailLoaderFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/EmailLoaderFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/EmailSender$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/EmailSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/FilePropertiesLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/LogUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/PropertiesLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/PropertiesLoaderFactory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/PropertiesLoaderFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/WrongEmailsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/WrongParametersException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SendEmailConsole/ru/ksd/service/esend/WrongPropertiesException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/ConsoleEmailLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/email/ConsoleEmailLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/DataSourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/data/DataSourceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/email/Email.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/email/EmailLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/email/EmailLoaderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/email/EmailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/esend/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/FilePropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/data/FilePropertiesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/LogUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/esend/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/data/PropertiesLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/data/PropertiesLoaderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/WrongEmailsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/exceptions/WrongEmailsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/WrongParametersException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/exceptions/WrongParametersException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ksd/service/esend/WrongPropertiesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/flc/service/exceptions/WrongPropertiesException.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,41 +64,68 @@
     <session id="1391196673">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="15" />
+          <entry key="MF" value="4" />
+          <entry key="class" value="1" />
+          <entry key="java" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="15" />
+          <entry key="CLASS" value="1" />
+          <entry key="Enforced Plain Text" value="1" />
+          <entry key="JAVA" value="53" />
+          <entry key="Manifest" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="776" />
+          <entry key="java" value="1898" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="776" />
+          <entry key="JAVA" value="1898" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/EmailSender.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/esend/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="136">
+              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/esend/Engine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="69" column="12" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,19 +134,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/email/EmailLoaderFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/data/DataSourceType.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/Engine.java">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/data/PropertiesLoaderFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-280">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/data/FilePropertiesLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,64 +176,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/log/LogUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/data/PropertiesLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
               <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoaderFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/ru/flc/service/email/EmailLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/WrongEmailsException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/WrongParametersException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="7" column="5" selection-start-line="4" selection-start-column="4" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/Email.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/WrongPropertiesException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/FilePropertiesLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+            <state relative-caret-position="153">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,23 +219,42 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getC</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/Email.java" />
         <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoaderType.java" />
-        <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/Main.java" />
         <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/WrongEmailsException.java" />
         <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/FilePropertiesLoader.java" />
         <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoaderFactory.java" />
         <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/ConsoleEmailLoader.java" />
         <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoader.java" />
         <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoaderFactory.java" />
-        <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/Engine.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/Email.java" />
         <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/EmailSender.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/filesystem/FileSystem.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/Engine.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/email/EmailSender.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/email/Email.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/email/EmailLoader.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/exceptions/WrongEmailsException.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/email/ConsoleEmailLoader.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/email/EmailLoaderFactory.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/DataSourceType.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/data/DataSourceType.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/data/FilePropertiesLoader.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/data/PropertiesLoaderFactory.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/LogUtil.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/log/LogUtil.java" />
+        <option value="$PROJECT_DIR$/src/ru/ksd/service/esend/Main.java" />
+        <option value="$PROJECT_DIR$/src/ru/flc/service/esend/Engine.java" />
       </list>
     </option>
   </component>
@@ -195,7 +274,6 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,25 +288,20 @@
             </path>
             <path>
               <item name="SendEmailConsole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SendEmailConsole" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="esend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SendEmailConsole" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534512895731" />
-    <property name="last_opened_file_path" value="D:/JavaLib/javamail-1.6.1/javax.mail.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537190772576" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar/SendEmailConsole.jar" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -245,7 +318,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -255,10 +328,24 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.ksd.service.esend.Main" />
       <module name="SendEmailConsole" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="it-support@ksdbook.ru alexey.dolodarenko@ksdbook.ru &quot;Test&quot; &quot; &quot; files:Books.txt sign:MessageBody.conf" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.ksd.service.esend.*" />
+          <option name="PATTERN" value="ru.ksd.service.exceptions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.flc.service.esend.Main" />
+      <module name="SendEmailConsole" />
+      <option name="PROGRAM_PARAMETERS" value="it-support@ksdbook.ru alexey.dolodarenko@ksdbook.ru Test &quot;Hello, there!&quot; files:Books.txt sign:MessageBody.conf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.flc.service.esend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -278,6 +365,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Jar" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/SendEmailConsole_jar/SendEmailConsole.jar" />
+      <option name="PROGRAM_PARAMETERS" value="it-support@ksdbook.ru alexey.dolodarenko@ksdbook.ru &quot;Test&quot; &quot; &quot; files:Books.txt sign:MessageBody.conf" />
+      <option name="WORKING_DIRECTORY" value="D:\Work\Projects\Java\KSD\SendEmailConsole" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
@@ -295,8 +389,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JAR Application.Jar" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -316,9 +415,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1092" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2717751" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28445426" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -327,15 +425,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32916668" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32881" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979124" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32985386" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -393,117 +491,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoaderType.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoaderType.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/lang/Throwable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        <state relative-caret-position="206">
+          <caret line="477" column="18" selection-start-line="477" selection-start-column="18" selection-end-line="477" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/ConsoleEmailLoader.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/util/logging/LogManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <state relative-caret-position="22967">
+          <caret line="1404" selection-start-line="1404" selection-end-line="1404" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36244">
+          <caret line="2215" column="24" selection-start-line="2215" selection-start-column="24" selection-end-line="2215" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaLib/javamail-1.6.1/javax.mail.jar!/javax/mail/Transport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/src.zip!/java/util/logging/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13906">
+          <caret line="869" column="16" selection-start-line="869" selection-start-column="16" selection-end-line="869" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/filesystem/FileSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/DataSourceType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/EmailLoaderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/FilePropertiesLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoaderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/WrongEmailsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/WrongParametersException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="5" selection-start-line="4" selection-start-column="4" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/WrongPropertiesException.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/exceptions/WrongEmailsException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/Email.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/exceptions/WrongParametersException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/Engine.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/exceptions/WrongPropertiesException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-280">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/email/ConsoleEmailLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/PropertiesLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/email/Email.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4772#4773#0" expanded="true" />
+            <element signature="e#4829#4830#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/email/EmailSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/email/EmailLoaderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/data/DataSourceType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/data/PropertiesLoaderFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ksd/service/esend/EmailSender.java">
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/data/FilePropertiesLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/log/LogUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/data/PropertiesLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/email/EmailLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/esend/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="69" column="12" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/flc/service/esend/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -513,10 +681,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>SendEmailConsole:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
