@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="javax.mail">
+  <library name="FLCService">
     <CLASSES>
-      <root url="jar://D:/JavaLib/javamail-1.6.1/javax.mail.jar!/" />
+      <root url="jar://D:/JavaLib/FLC/FLCService.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

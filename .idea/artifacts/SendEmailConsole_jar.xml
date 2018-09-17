@@ -5,7 +5,7 @@
       <element id="archive" name="SendEmailConsole.jar">
         <element id="module-output" name="SendEmailConsole" />
       </element>
-      <element id="library" level="project" name="javax.mail" />
+      <element id="library" level="project" name="FLCService" />
     </root>
   </artifact>
 </component>
